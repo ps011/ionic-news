@@ -1,0 +1,50 @@
+<!--<div class="list card"  ng-repeat="news in dataset track by $index">-->
+  <!--<div class="item item-avatar item-text-wrap">-->
+    <!--<img src="img/pic.png">-->
+    <!--<h3>{{news.title}}</h3>-->
+    <!--<p>{{news.author}}</p>-->
+  <!--</div>-->
+  <!--<div class="item item-image">-->
+    <!--<img src={{news.urlToImage}}>-->
+  <!--</div>-->
+  <!--<a class="item item-icon-left assertive" href="#" ng-click="fetchArticle($index)">-->
+    <!--<i class="icon ion-ios-book"></i>-->
+    <!--Read Full Article-->
+  <!--</a>-->
+<!--</div>-->
+
+<body ng-app="News" class="slide-left-right-ios7" no-scroll style="background: black">
+
+<ion-pane>
+  <swipe-cards on-card-swipe="onSwipe($event)" >
+
+    <swipe-cards>
+      <swipe-card on-card-swipe="cardSwiped()" id="start-card" style="background:red">
+        Swipe down for a new card
+      </swipe-card>
+      <swipe-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped($index)">
+        <div class="item item-avatar item-text-wrap">
+        <img src="img/pic.png">
+        <h3>{{card.title}}</h3>
+        <p>{{card.author}}</p>
+        </div>
+        <div class="item item-image">
+        <img src={{card.urlToImage}}>
+        </div>
+        <div class="item-text-wrap">
+          {{card.description}}
+        </div>
+
+        <a class="item item-icon-left assertive" href="#" ng-click="fetchArticle($index)">
+        <i class="icon ion-ios-book"></i>
+        Read Full Article
+        </a>
+
+
+
+
+      </swipe-card>
+    </swipe-cards>
+  </swipe-cards>
+</ion-pane>
+</body>
