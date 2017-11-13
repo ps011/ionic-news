@@ -1,18 +1,3 @@
-<!--<div class="list card"  ng-repeat="news in dataset track by $index">-->
-  <!--<div class="item item-avatar item-text-wrap">-->
-    <!--<img src="img/pic.png">-->
-    <!--<h3>{{news.title}}</h3>-->
-    <!--<p>{{news.author}}</p>-->
-  <!--</div>-->
-  <!--<div class="item item-image">-->
-    <!--<img src={{news.urlToImage}}>-->
-  <!--</div>-->
-  <!--<a class="item item-icon-left assertive" href="#" ng-click="fetchArticle($index)">-->
-    <!--<i class="icon ion-ios-book"></i>-->
-    <!--Read Full Article-->
-  <!--</a>-->
-<!--</div>-->
-
 <body ng-app="News" class="slide-left-right-ios7" no-scroll style="background: black">
 
 <ion-pane>
@@ -31,7 +16,7 @@
         <div class="item item-image">
         <img src={{card.urlToImage}}>
         </div>
-        <div class="item-text-wrap">
+        <div class="description item-text-wrap">
           {{card.description}}
         </div>
 
@@ -39,10 +24,6 @@
         <i class="icon ion-ios-book"></i>
         Read Full Article
         </a>
-
-
-
-
       </swipe-card>
     </swipe-cards>
   </swipe-cards>
